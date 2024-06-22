@@ -1,10 +1,35 @@
 {
 	"pages": [{
-		"path": "pages/index/index",
-		"style": {
-			"navigationBarTitleText": "uni-app"
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "售数处Sass"
+			}
+		},
+		{
+			"path": "pages/houseList/index",
+			"style": {
+				"navigationBarTitleText": "售数处列表"
+			}
+		},
+		{
+			"path": "pages/display/index",
+			"style": {
+				"navigationBarTitleText": "投放展示"
+			}
+		},
+		{
+			"path": "pages/cooperationCase/index",
+			"style": {
+				"navigationBarTitleText": "合作案例"
+			}
+		},
+		{
+			"path": "pages/mediaIntroduction/index",
+			"style": {
+				"navigationBarTitleText": "媒体介绍"
+			}
 		}
-	}],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
