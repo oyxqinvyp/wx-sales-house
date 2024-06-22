@@ -1,19 +1,14 @@
 <template>
 	<view class="container">
-
+		<button @click="toDetail">跳转到新页面</button>
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				href: 'https://uniapp.dcloud.io/component/README?id=uniui'
-			}
-		},
-		methods: {
-
-		}
+<script setup>
+	let toDetail = () => {
+		uni.navigateTo({
+			url: '/pages/houseList/index'
+		})
 	}
 </script>
 
