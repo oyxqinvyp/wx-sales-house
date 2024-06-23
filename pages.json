@@ -2,13 +2,20 @@
 	"pages": [{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "售数处Sass"
+				"navigationBarTitleText": "售数处Sass",
+				"backgroundColor": "#fcfcfc"
 			}
 		},
 		{
 			"path": "pages/houseList/index",
 			"style": {
 				"navigationBarTitleText": "售数处列表"
+			}
+		},
+		{
+			"path": "pages/houseList/detail",
+			"style": {
+				"navigationBarTitleText": "售数处详情"
 			}
 		},
 		{
@@ -30,18 +37,17 @@
 			}
 		},
 		{
-			"path" : "pages/login/index",
-			"style" : 
-			{
-				"navigationBarTitleText" : "登录"
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录"
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#fcfcfc",
+		"backgroundColor": "#fcfcfc",
 		"app-plus": {
 			"background": "#efeff4"
 		}
