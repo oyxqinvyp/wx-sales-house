@@ -9,7 +9,9 @@
 		{
 			"path": "pages/houseList/index",
 			"style": {
-				"navigationBarTitleText": "售数处列表"
+				"navigationBarTitleText": "售数处列表",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
 			}
 		},
 		{
