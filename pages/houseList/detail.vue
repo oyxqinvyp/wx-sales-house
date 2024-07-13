@@ -30,9 +30,10 @@
 		</view>
 		<view class="box-con">
 			<view class="tabs-box">
-				<uni-segmented-control class="w-full" :current="current" :values="items" style-type="text"
-					active-color="#3f8bf9" @clickItem="onClickItem" />
-				<uni-icons class="flex-shrink" type="settings" size="30" @click="open"></uni-icons>
+				<uv-sticky bgColor="#fff">
+					<uv-tabs :list="list" @click="onClickItem"></uv-tabs>
+					<uv-button text="月落" type="primary"></uv-button>
+				</uv-sticky>
 			</view>
 			<view class="item-1">
 				
@@ -50,8 +51,20 @@
 	} from '@dcloudio/uni-app'
 
 	let current = ref(1)
-	let items = ref(['客流趋势分析', '来源地分析', '楼盘竞品分析', '客户归属地'])
-	
+	let list = [{
+		name: '客流趋势分析'
+	}, {
+		name: '来源地分析'
+	}, {
+		name: '楼盘竞品分析'
+	}, {
+		name: '客户归属地'
+	}, {
+		name: '客户基础画像'
+	}, {
+		name: '报告数据'
+	}]
+
 	let open = () => {
 
 	}
@@ -102,16 +115,8 @@
 		}
 
 		.box-con {
-			overflow: hidden;
 			margin-top: 16rpx;
-			background-color: #fff;
 			padding: 0 10rpx;
-
-			.tabs-box {
-				width: 100%;
-				display: flex;
-				align-items: center;
-			}
 		}
 	}
 </style>
