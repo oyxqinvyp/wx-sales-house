@@ -393,15 +393,6 @@ onLoad((option) => {
 		.charts-item {
 			background-color: #fff;
 			padding-top: 16rpx;
-
-			.item-title {
-				// padding: 16rpx;
-				padding-left: 16rpx;
-				margin-left: 16rpx;
-				border-left: 2px solid #3c9cff;
-				font-size: 30rpx;
-				line-height: 30rpx;
-			}
 		}
 
 		.item-table {
