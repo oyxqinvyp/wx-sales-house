@@ -42,8 +42,15 @@
 	.flex-shrink {
 		flex-shrink: 0;
 	}
+	.justify-between {
+		justify-content: space-between;
+		align-items: center;
+	}
 	.gray {
 		color: #a4a4a4;
 		font-size: 24rpx;
+	}
+	.mt-12 {
+		margin-top: 12rpx;
 	}
 </style>
