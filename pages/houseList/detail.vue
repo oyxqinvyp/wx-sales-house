@@ -31,10 +31,14 @@
 		</view>
 		<uv-sticky bgColor="#fff">
 			<uv-tabs :list="list" @click="onClickItem"></uv-tabs>
-			<view class="flex justify-between mt-12">
-				<uv-subsection style="width: 400rpx;" :list="subsectionList" mode="subsection" :current="subsectionCurrent"
-					@change="change"></uv-subsection>
-				<uv-button size="normal" type="primary" style="height: 58rpx;">导出</uv-button>
+			<view class="my-btns flex justify-between mt-12">
+				<view style="width: 400rpx;">
+					<uv-subsection style="width: 400rpx;" :list="subsectionList" mode="subsection" :current="subsectionCurrent"
+						@change="change"></uv-subsection>
+				</view>
+				<uv-button size="normal" type="primary" :custom-style="{
+					height: '60rpx'
+				}">导出</uv-button>
 			</view>
 		</uv-sticky>
 		<view class="box-con">
@@ -196,294 +200,294 @@
 </template>
 
 <script setup>
-import {
-	ref
-} from 'vue'
-import {
-	onLoad
-} from '@dcloudio/uni-app'
+	import {
+		ref
+	} from 'vue'
+	import {
+		onLoad
+	} from '@dcloudio/uni-app'
 
-let current = ref(1)
-let list = [{
-	name: '客流趋势分析'
-}, {
-	name: '来源地分析'
-}, {
-	name: '楼盘竞品分析'
-}, {
-	name: '客户归属地'
-}, {
-	name: '客户基础画像'
-}, {
-	name: '报告数据'
-}]
-
-let open = () => {
-
-}
-let onClickItem = (e) => {
-	console.log(e)
-}
-
-let subsectionCurrent = ref(1)
-let change = (e) => {
-	subsectionCurrent.value = e
-	console.log(e)
-}
-let subsectionList = ['7天', '30天', '180天']
-
-// 图表1
-let chartData1 = ref({
-	categories: [
-		"1月", "2月", "3月", "4月", "5月", "6月"
-	],
-	series: [{
-		name: "客流",
-		data: [35, 8, 25, 37, 4, 20, 35, 8, 25, 37, 4, 20]
+	let current = ref(1)
+	let list = [{
+		name: '客流趋势分析'
+	}, {
+		name: '来源地分析'
+	}, {
+		name: '楼盘竞品分析'
+	}, {
+		name: '客户归属地'
+	}, {
+		name: '客户基础画像'
+	}, {
+		name: '报告数据'
 	}]
-})
-let opts1 = {
-	enableScroll: false,
-	legend: {
-		show: false,
-	},
-}
 
-// 表格2
-let tableData2 = ref([{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-])
+	let open = () => {
 
-// 表格3
-let tableData3 = ref([{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-{
-	name: '汇海小区',
-	num: '123'
-},
-])
+	}
+	let onClickItem = (e) => {
+		console.log(e)
+	}
 
-// 表格4
-let barList4 = ref([
-	{
-		name: '报告数据1',
-		value: '123'
-	},
-	{
-		name: '报告数据2',
-		value: '123'
-	},
-	{
-		name: '报告数据3',
-		value: '123'
-	},
-	{
-		name: '报告数据4',
-		value: '123'
-	},
-	{
-		name: '报告数据5',
-		value: '123'
-	},
-	{
-		name: '报告数据6',
-		value: '123'
-	},
-	{
-		name: '报告数据7',
-		value: '123'
-	},
-])
-onLoad((option) => {
-	console.log(option)
-})
+	let subsectionCurrent = ref(1)
+	let change = (e) => {
+		subsectionCurrent.value = e
+		console.log(e)
+	}
+	let subsectionList = ['7天', '30天', '180天']
+
+	// 图表1
+	let chartData1 = ref({
+		categories: [
+			"1月", "2月", "3月", "4月", "5月", "6月"
+		],
+		series: [{
+			name: "客流",
+			data: [35, 8, 25, 37, 4, 20, 35, 8, 25, 37, 4, 20]
+		}]
+	})
+	let opts1 = {
+		enableScroll: false,
+		legend: {
+			show: false,
+		},
+	}
+
+	// 表格2
+	let tableData2 = ref([{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+	])
+
+	// 表格3
+	let tableData3 = ref([{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+		{
+			name: '汇海小区',
+			num: '123'
+		},
+	])
+
+	// 表格4
+	let barList4 = ref([{
+			name: '报告数据1',
+			value: '123'
+		},
+		{
+			name: '报告数据2',
+			value: '123'
+		},
+		{
+			name: '报告数据3',
+			value: '123'
+		},
+		{
+			name: '报告数据4',
+			value: '123'
+		},
+		{
+			name: '报告数据5',
+			value: '123'
+		},
+		{
+			name: '报告数据6',
+			value: '123'
+		},
+		{
+			name: '报告数据7',
+			value: '123'
+		},
+	])
+	onLoad((option) => {
+		console.log(option)
+	})
 </script>
 
 <style lang="less" scoped>
-.house-box {
-	.box-top {
-		padding: 28rpx;
-		background-color: #fff;
-
-		.title-tip {
-			margin-top: 16rpx;
-			font-size: 26rpx;
-		}
-
-		.box-title {
-			display: flex;
-			align-items: center;
-
-			.title-img {
-				flex-shrink: 0;
-				width: 100rpx;
-				height: 100rpx;
-				background-color: #999;
-				margin-right: 20rpx;
-			}
-
-			.title-sub {
-				width: 100%;
-
-				.title {
-					margin-bottom: 20rpx;
-				}
-			}
-
-			.title-tag {
-				flex-shrink: 0;
-			}
-		}
-	}
-
-	.flex.justify-between.mt-12 {
-		padding: 0 16rpx;
-	}
-
-	.box-con {
-
-		.charts-item {
+	.house-box {
+		.box-top {
+			padding: 28rpx;
 			background-color: #fff;
-			padding-top: 16rpx;
-		}
 
-		.item-table {
-			padding: 10rpx;
-
-			.item-head {
-				background-color: #f9f9f9;
-			}
-
-			.item-body {
-				.item-tr:nth-child(odd) {
-					background-color: #eef5fe;
-				}
-			}
-
-			.item-tr {
-				display: flex;
-
-			}
-
-			.item-td,
-			.item-th {
-				padding: 10rpx 0;
-				width: 50%;
-				text-align: center;
-			}
-		}
-
-		.item-bar {
-			padding: 20rpx;
-
-			.bar-con {
-				margin-top: 20rpx;
-				margin-bottom: 20rpx;
-				border-radius: 10rpx;
-				overflow: hidden;
-
-
-				.con-tag {
-					text-align: center;
-					color: #fff;
-					padding: 10rpx;
-				}
-
-				.con-tag-1 {
-					background: #1890ff;
-				}
-
-				.con-tag-2 {
-					background: #91cb74;
-				}
+			.title-tip {
+				margin-top: 16rpx;
+				font-size: 26rpx;
 			}
 
 			.box-title {
 				display: flex;
 				align-items: center;
 
-				// justify-content: space-between;
+				.title-img {
+					flex-shrink: 0;
+					width: 100rpx;
+					height: 100rpx;
+					background-color: #999;
+					margin-right: 20rpx;
+				}
+
+				.title-sub {
+					width: 100%;
+
+					.title {
+						margin-bottom: 20rpx;
+					}
+				}
+
 				.title-tag {
-					width: 200rpx;
-					text-align: center;
-
-					&::after {
-						content: '';
-						width: 30rpx;
-						height: 30rpx;
-						display: inline-block;
-						margin-left: 6rpx;
-						vertical-align: text-bottom;
-					}
-
-					&.title-tag-1::after {
-						background: #1890ff;
-					}
-
-					&.title-tag-2::after {
-						background: #91cb74;
-					}
+					flex-shrink: 0;
 				}
 			}
 		}
 
-		.item-report {
-			padding: 20rpx;
-			.item-box {
-				margin-bottom: 20rpx;
-				padding: 20rpx 10rpx;
-				background: #f1f2f4;
-				border-radius: 10rpx;
+		.flex.justify-between.mt-12 {
+			padding: 0 16rpx;
+		}
+
+		.box-con {
+
+			.charts-item {
+				background-color: #fff;
+				padding-top: 16rpx;
+			}
+
+			.item-table {
+				padding: 10rpx;
+
+				.item-head {
+					background-color: #f9f9f9;
+				}
+
+				.item-body {
+					.item-tr:nth-child(odd) {
+						background-color: #eef5fe;
+					}
+				}
+
+				.item-tr {
+					display: flex;
+
+				}
+
+				.item-td,
+				.item-th {
+					padding: 10rpx 0;
+					width: 50%;
+					text-align: center;
+				}
+			}
+
+			.item-bar {
+				padding: 20rpx;
+
+				.bar-con {
+					margin-top: 20rpx;
+					margin-bottom: 20rpx;
+					border-radius: 10rpx;
+					overflow: hidden;
+
+
+					.con-tag {
+						text-align: center;
+						color: #fff;
+						padding: 10rpx;
+					}
+
+					.con-tag-1 {
+						background: #1890ff;
+					}
+
+					.con-tag-2 {
+						background: #91cb74;
+					}
+				}
+
+				.box-title {
+					display: flex;
+					align-items: center;
+
+					// justify-content: space-between;
+					.title-tag {
+						width: 200rpx;
+						text-align: center;
+
+						&::after {
+							content: '';
+							width: 30rpx;
+							height: 30rpx;
+							display: inline-block;
+							margin-left: 6rpx;
+							vertical-align: text-bottom;
+						}
+
+						&.title-tag-1::after {
+							background: #1890ff;
+						}
+
+						&.title-tag-2::after {
+							background: #91cb74;
+						}
+					}
+				}
+			}
+
+			.item-report {
+				padding: 20rpx;
+
+				.item-box {
+					margin-bottom: 20rpx;
+					padding: 20rpx 10rpx;
+					background: #f1f2f4;
+					border-radius: 10rpx;
+				}
 			}
 		}
 	}
-}
 </style>

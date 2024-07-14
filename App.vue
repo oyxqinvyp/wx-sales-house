@@ -62,6 +62,10 @@ page {
 	margin-top: 12rpx;
 }
 
+.ml-12 {
+	margin-left: 12rpx;
+}
+
 .item-title {
 	padding-left: 16rpx;
 	margin-left: 16rpx;
