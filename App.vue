@@ -54,6 +54,12 @@ page {
 	color: #a4a4a4;
 	font-size: 24rpx;
 }
+
+.num {
+	color: #3c9cff;
+	font-size: 36rpx;
+}
+
 .p-12 {
 	padding: 12rpx;
 }
@@ -72,5 +78,30 @@ page {
 	border-left: 2px solid #3c9cff;
 	font-size: 30rpx;
 	line-height: 30rpx;
+}
+
+.item-table {
+	padding: 10rpx;
+
+	.item-head {
+		background-color: #f9f9f9;
+	}
+
+	.item-body {
+		.item-tr:nth-child(odd) {
+			background-color: #eef5fe;
+		}
+	}
+
+	.item-tr {
+		display: flex;
+	}
+
+	.item-td,
+	.item-th {
+		padding: 10rpx 0;
+		width: 50%;
+		text-align: center;
+	}
 }
 </style>

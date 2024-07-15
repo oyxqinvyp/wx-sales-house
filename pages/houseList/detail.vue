@@ -398,32 +398,6 @@
 				padding-top: 16rpx;
 			}
 
-			.item-table {
-				padding: 10rpx;
-
-				.item-head {
-					background-color: #f9f9f9;
-				}
-
-				.item-body {
-					.item-tr:nth-child(odd) {
-						background-color: #eef5fe;
-					}
-				}
-
-				.item-tr {
-					display: flex;
-
-				}
-
-				.item-td,
-				.item-th {
-					padding: 10rpx 0;
-					width: 50%;
-					text-align: center;
-				}
-			}
-
 			.item-bar {
 				padding: 20rpx;
 
