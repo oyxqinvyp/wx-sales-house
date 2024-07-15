@@ -29,7 +29,9 @@
 		{
 			"path": "pages/cooperationCase/index",
 			"style": {
-				"navigationBarTitleText": "合作案例"
+				"navigationBarTitleText": "合作案例",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
 			}
 		},
 		{
